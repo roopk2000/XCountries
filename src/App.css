@@ -1,38 +1,22 @@
-.App {
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Each grid item will have a width of 300px */
+  gap: 20px;
+}
+
+.grid-item {
   text-align: center;
+  width: 100px; /* Set the width of each grid item */
+  
+  margin :20px;
+  border: 0.5px solid grey; /* Add a solid border */
+  border-radius: 5px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-item img {
+  max-width: 100%; /* Ensure the image inside each grid item doesn't exceed the box size */
+  height: 50px;
+  object-fit: cover; /* Ensure the flag fills the img element */
 }
